@@ -18,7 +18,7 @@ try
    
    #Make directory for scripts and download startup script
    mkdir C:\Users\shi\scaleft-source
-   Invoke-WebRequest -Uri https://asascriptstorage.blob.core.windows.net/newcontainer/ExtIP_allin1.cmd -OutFile C:\Users\shi\scaleft-source\ExtIP_allin1.cmd
+   Invoke-WebRequest -Uri https://github.com/SHI-ASG-Lab/PUBLICscripts/blob/621a5e089910616f510f5081559ca3d6b1ba6845/oktaasa/Azure/ExtIP_allin1.cmd -OutFile C:\Users\shi\scaleft-source\ExtIP_allin1.cmd
    
    #Schedule task to get external IP for Okta
    $action = New-ScheduledTaskAction -Execute 'C:\Users\shi\scaleft-source\ExtIP_allin1.cmd'
