@@ -32,8 +32,10 @@ try
    Import-Module -Name C:\Users\shi\scaleft-source\scaleft-powershell\ScaleFT.PS\Install
    Install-ScaleFTServerTools
    
-   #Reboot
-   Restart-Computer
+   #Run GetExtIP script for first time without reboot
+   C:\Users\shi\scaleft-source\ExtIP_allin1.cmd
+   #Restart sftd service
+   Restart-Service -Name scaleft-server-tools
 }
 
 catch
